@@ -7,10 +7,14 @@
 
 import UIKit
 
-class XCPageTitleView: UIView {
+typealias selectedTitleBlock = (_ atIndexPath:NSIndexPath) -> Void
 
+class XCPageTitleView: UIView {
+    
     var titles:[String]?
     var defaultItemWith : CGFloat
+    var didSelectedTitleBlock : selectedTitleBlock?
+    
     
     lazy var titleCollectionView:UICollectionView = { [weak self] in
         let viewLayout = UICollectionViewFlowLayout.init()
@@ -87,16 +91,7 @@ extension XCPageTitleView : UICollectionViewDelegate,UICollectionViewDataSource,
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let cell = collectionView.cellForItem(at: indexPath) as? XCTitlePageCollectionViewCell
-        
-        let cellX = cell?.frame.origin.x ?? 0
-        let cellWidth = cell?.frame.size.width ?? 0
-        
-        let offsetX = cellX + (cellWidth - 30)/2
-        
-        UIView.animate(withDuration: 0.16) {
-            self.lineView.frame.origin.x = offsetX
-        }
+        self.didSelectedTitleBlock!(indexPath as NSIndexPath)
     }
     
 }

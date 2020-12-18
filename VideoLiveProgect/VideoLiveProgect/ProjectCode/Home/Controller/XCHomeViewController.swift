@@ -7,16 +7,21 @@
 
 import UIKit
 
-class XCHomeViewController: XCBaseViewController {
+class XCHomeViewController: XCBaseViewController{
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavbar()
         
-        view.addSubview(self.pageTitleview)
+        view.addSubview(self.pageContainView)
     }
     
-    
+    private lazy var pageContainView:XCPageContainView = {
+        let pageview = XCPageContainView(frame: CGRect(x: 0, y: 0, width: SCRENT_WIDTH, height: SCRENT_HEIGHT - NAV_HEIGHT))
+        pageview.dataSource = self
+        return pageview
+    }()
     
     private lazy var pageTitleview: XCPageTitleView = {
         let titles = ["推荐","游戏","娱乐","去玩"]
@@ -41,4 +46,8 @@ extension XCHomeViewController{
     }
 }
 
-
+extension XCHomeViewController:XCPageContainViewDataSource {
+    func pageContainViewGetAllTitles(_ containView: XCPageContainView) -> [String] {
+        return ["推荐","游戏","娱乐","去玩"]
+    }
+}

@@ -27,6 +27,7 @@
 		298FF4152588B24900553580 /* UITabbarButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FF4142588B24900553580 /* UITabbarButton+Extension.swift */; };
 		298FF41F2588BD4D00553580 /* XCPageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FF41E2588BD4D00553580 /* XCPageTitleView.swift */; };
 		298FF4232589A7C700553580 /* XCTitlePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FF4222589A7C700553580 /* XCTitlePageCollectionViewCell.swift */; };
+		298FF433258B3FA800553580 /* XCPageContainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 298FF432258B3FA800553580 /* XCPageContainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		298FF4142588B24900553580 /* UITabbarButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabbarButton+Extension.swift"; sourceTree = "<group>"; };
 		298FF41E2588BD4D00553580 /* XCPageTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCPageTitleView.swift; sourceTree = "<group>"; };
 		298FF4222589A7C700553580 /* XCTitlePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTitlePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		298FF432258B3FA800553580 /* XCPageContainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCPageContainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 			children = (
 				298FF41E2588BD4D00553580 /* XCPageTitleView.swift */,
 				298FF4222589A7C700553580 /* XCTitlePageCollectionViewCell.swift */,
+				298FF432258B3FA800553580 /* XCPageContainView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				298914BA2587720200E90FA7 /* XCFollowViewController.swift in Sources */,
 				298914B4258771EF00E90FA7 /* XCProfileViewController.swift in Sources */,
 				298914B02587712300E90FA7 /* XCBaseViewController.swift in Sources */,
+				298FF433258B3FA800553580 /* XCPageContainView.swift in Sources */,
 				298914C82587775000E90FA7 /* ProjectDefine.swift in Sources */,
 				298914BE2587720E00E90FA7 /* XCLiveViewController.swift in Sources */,
 			);
