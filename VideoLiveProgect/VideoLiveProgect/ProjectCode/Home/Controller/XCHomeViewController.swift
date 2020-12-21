@@ -18,8 +18,9 @@ class XCHomeViewController: XCBaseViewController{
     }
     
     private lazy var pageContainView:XCPageContainView = {
-        let pageview = XCPageContainView(frame: CGRect(x: 0, y: 0, width: SCRENT_WIDTH, height: SCRENT_HEIGHT - NAV_HEIGHT))
+        let pageview = XCPageContainView(frame: CGRect(x: 0, y: NAV_HEIGHT, width: SCRENT_WIDTH, height: SCRENT_HEIGHT - NAV_HEIGHT))
         pageview.dataSource = self
+        pageview.delegate = self
         return pageview
     }()
     
@@ -46,8 +47,22 @@ extension XCHomeViewController{
     }
 }
 
-extension XCHomeViewController:XCPageContainViewDataSource {
+extension XCHomeViewController:XCPageContainViewDataSource,XCPageContainViewDelegate {
+    func pageContainView(_ containView: XCPageContainView, itemForIndex atIndex: Int) -> UIViewController {
+        let controller : UIViewController = UIViewController()
+        controller.view.backgroundColor = UIColor.blue
+        return controller
+    }
+    
+    func pageContainView(_ containView: XCPageContainView, willScrollToIndex index: Int) {
+        print("将要滑到第\(index)页")
+    }
+    func pageContainView(_ containView: XCPageContainView, didScrollToIndex index: Int) {
+        print("滑到了第\(index)页")
+    }
+    
     func pageContainViewGetAllTitles(_ containView: XCPageContainView) -> [String] {
         return ["推荐","游戏","娱乐","去玩"]
     }
+    
 }

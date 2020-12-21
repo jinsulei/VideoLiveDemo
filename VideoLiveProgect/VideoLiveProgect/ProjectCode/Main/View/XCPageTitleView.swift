@@ -14,6 +14,18 @@ class XCPageTitleView: UIView {
     var titles:[String]?
     var defaultItemWith : CGFloat
     var didSelectedTitleBlock : selectedTitleBlock?
+    var _lineViewWidth : CGFloat = 0
+    
+    var linewViewWidth : CGFloat {
+        set {
+            _lineViewWidth = newValue
+            lineView.frame = CGRect(x: (defaultItemWith-_lineViewWidth)/2, y: self.frame.height-4.5, width: _lineViewWidth, height: 4)
+        }
+        get{
+            return _lineViewWidth
+        }
+    }
+    
     
     
     lazy var titleCollectionView:UICollectionView = { [weak self] in
@@ -59,6 +71,7 @@ class XCPageTitleView: UIView {
         lineView.frame = CGRect(x: (defaultItemWith-30)/2, y: self.frame.height-4.5, width: 30, height: 4)
         lineView.clipsToBounds = true
         lineView.layer.cornerRadius = 2
+        _lineViewWidth = 30
     }
 }
 
