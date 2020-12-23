@@ -23,16 +23,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8B243D79-D589-40ED-8DFF-A5EDDBBDF29F"
+            uuid = "283A634B-02CA-4C01-B586-E6E1FB2DAB58"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "VideoLiveProgect/ProjectCode/Main/View/XCPageContainView.swift"
+            filePath = "VideoLiveProgect/ProjectCode/Main/View/XCPageView/XCPageTitleView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "scrollViewDidEndDecelerating(_:)"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "collectionView(_:didEndDisplaying:forItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

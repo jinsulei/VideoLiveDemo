@@ -49,9 +49,15 @@ extension XCHomeViewController{
 
 extension XCHomeViewController:XCPageContainViewDataSource,XCPageContainViewDelegate {
     func pageContainView(_ containView: XCPageContainView, itemForIndex atIndex: Int) -> UIViewController {
-        let controller : UIViewController = UIViewController()
-        controller.view.backgroundColor = UIColor.blue
-        return controller
+        if atIndex == 0 {
+            let controller : XCRecommendViewController = XCRecommendViewController()
+            return controller
+        }else{
+            let controller : UIViewController = UIViewController()
+            controller.view.backgroundColor = UIColor.blue
+            return controller
+        }
+        
     }
     
     func pageContainView(_ containView: XCPageContainView, willScrollToIndex index: Int) {

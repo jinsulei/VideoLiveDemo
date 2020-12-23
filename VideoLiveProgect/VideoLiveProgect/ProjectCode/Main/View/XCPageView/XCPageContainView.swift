@@ -150,6 +150,20 @@ extension XCPageContainView : UICollectionViewDelegate,UICollectionViewDataSourc
         if let aDelegate = self.delegate {
             aDelegate.pageContainView!(self, willScrollToIndex: indexPath.row)
         }
+        
+        if let viewConntroller:UIViewController = self.viewControllersDic["\(indexPath.row)"] as? UIViewController {
+            viewConntroller.view.removeFromSuperview()
+            cell.addSubview(viewConntroller.view)
+            viewConntroller.view.frame = cell.bounds
+        }else{
+            if let aDatasource = self.dataSource {
+                let controller = aDatasource.pageContainView(self, itemForIndex: indexPath.row)
+                self.viewControllersDic.setValue(controller, forKey: "\(indexPath.row)")
+                controller.view.removeFromSuperview()
+                cell.addSubview(controller.view)
+                controller.view.frame = cell.bounds
+            }
+        }
     }
     
 }
@@ -202,22 +216,24 @@ extension XCPageContainView : UIScrollViewDelegate{
 //            self?.pageTitleview.lineView.frame.size.width = self?.pageTitleview.linewViewWidth ?? 0
 //            self?.pageTitleview.lineView.frame.origin.x =  (self?.currentCell.frame.minX)! + ((self?.currentCell.frame.width)! - (self?.pageTitleview.linewViewWidth)!)/2
 //        }
-
+        self.pageTitleview.didScrollToItemAtIndex(atIndex: currentIndex)
         if let aDelegate = self.delegate {
             aDelegate.pageContainView!(self, didScrollToIndex: currentIndex)
         }
         
-        if let viewConntroller:UIViewController = self.viewControllersDic["\(currentIndex)"] as? UIViewController {
-            viewConntroller.view.removeFromSuperview()
-            containCell!.addSubview(viewConntroller.view)
-        }else{
-            if let aDatasource = self.dataSource {
-                let controller = aDatasource.pageContainView(self, itemForIndex: currentIndex)
-                self.viewControllersDic.setValue(controller, forKey: "\(currentIndex)")
-                controller.view.removeFromSuperview()
-                containCell!.addSubview(controller.view)
-            }
-        }
+//        if let viewConntroller:UIViewController = self.viewControllersDic["\(currentIndex)"] as? UIViewController {
+//            viewConntroller.view.removeFromSuperview()
+//            containCell!.addSubview(viewConntroller.view)
+//            viewConntroller.view.frame = containCell!.bounds
+//        }else{
+//            if let aDatasource = self.dataSource {
+//                let controller = aDatasource.pageContainView(self, itemForIndex: currentIndex)
+//                self.viewControllersDic.setValue(controller, forKey: "\(currentIndex)")
+//                controller.view.removeFromSuperview()
+//                containCell!.addSubview(controller.view)
+//                controller.view.frame = containCell!.bounds
+//            }
+//        }
         
     }
 }

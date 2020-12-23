@@ -1,0 +1,6 @@
+framework module Pods_VideoLiveProgectTests {
+  umbrella header "Pods-VideoLiveProgectTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

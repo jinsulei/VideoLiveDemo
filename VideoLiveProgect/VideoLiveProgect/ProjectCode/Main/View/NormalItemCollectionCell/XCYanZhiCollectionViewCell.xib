@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XCYanZhiCollectionViewCell" customModule="VideoLiveProgect" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="185" height="207"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="185" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZU-Bv-qWr">
+                        <rect key="frame" x="0.0" y="191" width="185" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="14" id="rbF-Ky-a5l"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="广州市" image="ico_location">
+                            <color key="titleColor" systemColor="secondaryLabelColor"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="美女.mr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yx5-zX-AYM">
+                        <rect key="frame" x="0.0" y="170" width="185" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="crm-eq-d3W"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="live_cell_default_phone" translatesAutoresizingMaskIntoConstraints="NO" id="Ewh-tL-cgc">
+                        <rect key="frame" x="0.0" y="0.0" width="185" height="169"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4410在线" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqU-yV-NiD">
+                        <rect key="frame" x="119" y="6" width="60" height="12"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.41869113869863012" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="HNX-ax-thy"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="2"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="zqU-yV-NiD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="6" id="4cc-Vj-sFu"/>
+                <constraint firstItem="tZU-Bv-qWr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="6wI-ga-lRe"/>
+                <constraint firstAttribute="trailing" secondItem="tZU-Bv-qWr" secondAttribute="trailing" id="7a6-dg-KN0"/>
+                <constraint firstItem="tZU-Bv-qWr" firstAttribute="top" secondItem="yx5-zX-AYM" secondAttribute="bottom" id="G0E-Xo-dlH"/>
+                <constraint firstItem="yx5-zX-AYM" firstAttribute="top" secondItem="Ewh-tL-cgc" secondAttribute="bottom" constant="1" id="RSq-Uj-zOF"/>
+                <constraint firstItem="Ewh-tL-cgc" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SNg-BB-g4y"/>
+                <constraint firstAttribute="trailing" secondItem="Ewh-tL-cgc" secondAttribute="trailing" id="Sfq-ks-5ll"/>
+                <constraint firstAttribute="bottom" secondItem="tZU-Bv-qWr" secondAttribute="bottom" constant="2" id="XqY-rK-MCt"/>
+                <constraint firstAttribute="trailing" secondItem="yx5-zX-AYM" secondAttribute="trailing" id="c6Q-xS-5ss"/>
+                <constraint firstItem="Ewh-tL-cgc" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="g5D-AD-4rk"/>
+                <constraint firstAttribute="trailing" secondItem="zqU-yV-NiD" secondAttribute="trailing" constant="6" id="onf-m9-3Sf"/>
+                <constraint firstItem="yx5-zX-AYM" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="z8e-m5-BvG"/>
+            </constraints>
+            <size key="customSize" width="185" height="207"/>
+            <connections>
+                <outlet property="coverImageView" destination="Ewh-tL-cgc" id="VW2-Ar-bom"/>
+                <outlet property="localtionBtn" destination="tZU-Bv-qWr" id="mpo-ck-hns"/>
+                <outlet property="onlineNumLabel" destination="zqU-yV-NiD" id="kj7-lf-0pz"/>
+                <outlet property="titleLabel" destination="yx5-zX-AYM" id="dY8-F4-EEc"/>
+            </connections>
+            <point key="canvasLocation" x="-251.44927536231887" y="67.96875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ico_location" width="12" height="12"/>
+        <image name="live_cell_default_phone" width="103.5" height="103.5"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+let SERVER_BASE_URL = "http://capi.douyucdn.cn/api/v1/"
+
+
 let SCRENT_WIDTH = UIScreen.main.bounds.width
 let SCRENT_HEIGHT = UIScreen.main.bounds.height
 

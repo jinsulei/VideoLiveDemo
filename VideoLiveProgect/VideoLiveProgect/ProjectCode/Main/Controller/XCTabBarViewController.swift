@@ -12,7 +12,7 @@ class XCTabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tabBar.tintColor = UIColor.orange
-        
+        self.tabBar.isTranslucent = true
         UITabBar.appearance().clipsToBounds = true
         
         let homeNavController = UIStoryboard(name: "Home", bundle: nil).instantiateInitialViewController()

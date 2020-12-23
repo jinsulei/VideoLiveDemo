@@ -15,6 +15,7 @@ class XCPageTitleView: UIView {
     var defaultItemWith : CGFloat
     var didSelectedTitleBlock : selectedTitleBlock?
     var _lineViewWidth : CGFloat = 0
+    var _oldSelectIndex :Int = 0
     
     var linewViewWidth : CGFloat {
         set {
@@ -25,7 +26,6 @@ class XCPageTitleView: UIView {
             return _lineViewWidth
         }
     }
-    
     
     
     lazy var titleCollectionView:UICollectionView = { [weak self] in
@@ -59,12 +59,9 @@ class XCPageTitleView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    
-    func setupView(){
-        
-    }
-    
+}
+
+extension XCPageTitleView{
     func setupLineView()  {
         self.titleCollectionView.addSubview(self.lineView)
         
@@ -72,6 +69,19 @@ class XCPageTitleView: UIView {
         lineView.clipsToBounds = true
         lineView.layer.cornerRadius = 2
         _lineViewWidth = 30
+    }
+    
+    func didScrollToItemAtIndex(atIndex:Int){
+        if atIndex != _oldSelectIndex {
+            let containCell  = self.titleCollectionView.cellForItem(at: IndexPath.init(row: _oldSelectIndex, section: 0)) as! XCTitlePageCollectionViewCell
+            containCell.updateCellWithDisplay(isDisplay: false)
+            
+            self.titleCollectionView.scrollToItem(at: NSIndexPath(row: atIndex, section: 0) as IndexPath, at: UICollectionView.ScrollPosition.centeredHorizontally, animated: true)
+            
+            _oldSelectIndex = atIndex
+        }
+        let acontainCell  = self.titleCollectionView.cellForItem(at: IndexPath.init(row: atIndex, section: 0)) as! XCTitlePageCollectionViewCell
+        acontainCell.updateCellWithDisplay(isDisplay: true)
     }
 }
 
@@ -107,4 +117,17 @@ extension XCPageTitleView : UICollectionViewDelegate,UICollectionViewDataSource,
         self.didSelectedTitleBlock!(indexPath as NSIndexPath)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let cell : XCTitlePageCollectionViewCell = cell as! XCTitlePageCollectionViewCell
+        cell.updateCellWithDisplay(isDisplay: false)
+        
+    }
 }
+
+//extension XCPageTitleView:UIScrollViewDelegate{
+//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+//        let currentIndex = Int(scrollView.contentOffset.x / self.defaultItemWith)
+//        let containCell  = self.titleCollectionView.cellForItem(at: IndexPath.init(row: currentIndex, section: 0)) as! XCTitlePageCollectionViewCell
+//        containCell.updateCellWithDisplay(isDisplay: true)
+//    }
+//}

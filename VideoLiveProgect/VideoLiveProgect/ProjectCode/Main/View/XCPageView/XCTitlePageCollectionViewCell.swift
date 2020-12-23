@@ -22,6 +22,10 @@ class XCTitlePageCollectionViewCell: UICollectionViewCell {
         
     }
     
+    func updateCellWithDisplay(isDisplay:Bool)  {
+        self.titleLabel.textColor = isDisplay ? UIColor.orange : UIColor.black
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
