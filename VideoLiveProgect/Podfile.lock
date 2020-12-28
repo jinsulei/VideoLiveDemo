@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.9.1)
+  - FSPagerView (0.8.3)
   - HandyJSON (5.0.2)
   - Kingfisher (4.10.1)
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
   - HandyJSON
   - Kingfisher
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FSPagerView
     - HandyJSON
     - Kingfisher
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
 
-PODFILE CHECKSUM: 8f65b641fc975fd056ff8bab123e23ba3c567c0e
+PODFILE CHECKSUM: 2aa36a0df168c7ac612214bb164c1cced25bca35
 
 COCOAPODS: 1.10.0

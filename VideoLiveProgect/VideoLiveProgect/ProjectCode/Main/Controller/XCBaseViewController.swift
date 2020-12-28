@@ -25,5 +25,15 @@ class XCBaseViewController: UITabBarController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    func pushViewController(_ controller:XCBaseViewController)  {
+        controller.hidesBottomBarWhenPushed = true
+        var nav = self.navigationController
+        if (nav == nil) {
+            let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+            nav = (app.tabbarController?.viewControllers![(app.tabbarController?.selectedIndex)!] as! UINavigationController)
+        }
+        if nav != nil {
+            nav?.pushViewController(controller, animated: true)
+        }
+    }
 }

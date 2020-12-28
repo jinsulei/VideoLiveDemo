@@ -16,4 +16,8 @@ target 'VideoLiveProgect' do
 pod 'Kingfisher'
 pod 'Alamofire'
 pod 'HandyJSON'
+
+#banner滚动图片
+pod 'FSPagerView'
+
 end

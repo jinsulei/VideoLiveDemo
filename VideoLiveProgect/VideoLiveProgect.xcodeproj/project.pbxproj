@@ -40,6 +40,11 @@
 		29C15CBE2593498C00889D13 /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CBD2593498C00889D13 /* NSDate+Extension.swift */; };
 		29C15CD2259358ED00889D13 /* XCAnchorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CD1259358ED00889D13 /* XCAnchorModel.swift */; };
 		29C15CDF2593680200889D13 /* XCBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CDE2593680200889D13 /* XCBaseModel.swift */; };
+		29C15CF42594387E00889D13 /* XCRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CF32594387E00889D13 /* XCRoom.swift */; };
+		29C15CF82594389300889D13 /* XCBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CF72594389300889D13 /* XCBanner.swift */; };
+		29C15CFC2594795300889D13 /* XCRecommendBannerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C15CFB2594795300889D13 /* XCRecommendBannerHeaderView.swift */; };
+		29D0F1532594D0E500A0D526 /* XCRoomVerticalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0F1522594D0E500A0D526 /* XCRoomVerticalViewController.swift */; };
+		29D0F15D2594D16700A0D526 /* XCRoomHorizontalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D0F15C2594D16700A0D526 /* XCRoomHorizontalViewController.swift */; };
 		4AB131748B0E0D0710DBD3C3 /* Pods_VideoLiveProgect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F4CEBDF416D9A62272C54D4 /* Pods_VideoLiveProgect.framework */; };
 		8E5692E5057677AC75C3E009 /* Pods_VideoLiveProgectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E276E7ADCC85C9B1F2DF33E5 /* Pods_VideoLiveProgectTests.framework */; };
 /* End PBXBuildFile section */
@@ -92,6 +97,11 @@
 		29C15CBD2593498C00889D13 /* NSDate+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
 		29C15CD1259358ED00889D13 /* XCAnchorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAnchorModel.swift; sourceTree = "<group>"; };
 		29C15CDE2593680200889D13 /* XCBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBaseModel.swift; sourceTree = "<group>"; };
+		29C15CF32594387E00889D13 /* XCRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCRoom.swift; sourceTree = "<group>"; };
+		29C15CF72594389300889D13 /* XCBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCBanner.swift; sourceTree = "<group>"; };
+		29C15CFB2594795300889D13 /* XCRecommendBannerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCRecommendBannerHeaderView.swift; sourceTree = "<group>"; };
+		29D0F1522594D0E500A0D526 /* XCRoomVerticalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCRoomVerticalViewController.swift; sourceTree = "<group>"; };
+		29D0F15C2594D16700A0D526 /* XCRoomHorizontalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCRoomHorizontalViewController.swift; sourceTree = "<group>"; };
 		3F4CEBDF416D9A62272C54D4 /* Pods_VideoLiveProgect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VideoLiveProgect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		664881D79A03F02C1AD8E395 /* Pods-VideoLiveProgect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoLiveProgect.debug.xcconfig"; path = "Target Support Files/Pods-VideoLiveProgect/Pods-VideoLiveProgect.debug.xcconfig"; sourceTree = "<group>"; };
 		684AE7DB77E84AA87CBD8E9E /* Pods-VideoLiveProgectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VideoLiveProgectTests.debug.xcconfig"; path = "Target Support Files/Pods-VideoLiveProgectTests/Pods-VideoLiveProgectTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				29891492258753B200E90FA7 /* Main */,
+				29D0F14A2594CB8B00A0D526 /* Room */,
 				298914912587537800E90FA7 /* Tools */,
 				298914902587535000E90FA7 /* Profile */,
 				2989148F2587533100E90FA7 /* Follow */,
@@ -249,6 +260,7 @@
 			children = (
 				298D0BA32591C57E00F5F0ED /* XCRecommendHeaderView.swift */,
 				298D0BA42591C57E00F5F0ED /* XCRecommendHeaderView.xib */,
+				29C15CFB2594795300889D13 /* XCRecommendBannerHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -324,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				29C15CD1259358ED00889D13 /* XCAnchorModel.swift */,
+				29C15CF72594389300889D13 /* XCBanner.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +345,40 @@
 			isa = PBXGroup;
 			children = (
 				29C15CDE2593680200889D13 /* XCBaseModel.swift */,
+				29C15CF32594387E00889D13 /* XCRoom.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		29D0F14A2594CB8B00A0D526 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				29D0F14D2594CD1400A0D526 /* Model */,
+				29D0F14C2594CCF600A0D526 /* Controller */,
+				29D0F14B2594CCEE00A0D526 /* View */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		29D0F14B2594CCEE00A0D526 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		29D0F14C2594CCF600A0D526 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				29D0F15C2594D16700A0D526 /* XCRoomHorizontalViewController.swift */,
+				29D0F1522594D0E500A0D526 /* XCRoomVerticalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		29D0F14D2594CD1400A0D526 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -522,7 +569,11 @@
 			files = (
 				298D0BA52591C57E00F5F0ED /* XCRecommendHeaderView.swift in Sources */,
 				298914C4258772FE00E90FA7 /* XCHomeViewController.swift in Sources */,
+				29C15CFC2594795300889D13 /* XCRecommendBannerHeaderView.swift in Sources */,
+				29C15CF82594389300889D13 /* XCBanner.swift in Sources */,
 				298FF4152588B24900553580 /* UITabbarButton+Extension.swift in Sources */,
+				29D0F15D2594D16700A0D526 /* XCRoomHorizontalViewController.swift in Sources */,
+				29C15CF42594387E00889D13 /* XCRoom.swift in Sources */,
 				298D0BBD2591F1D000F5F0ED /* XCYanZhiCollectionViewCell.swift in Sources */,
 				29C15CBE2593498C00889D13 /* NSDate+Extension.swift in Sources */,
 				2989142725873F2C00E90FA7 /* RootViewController.swift in Sources */,
@@ -538,6 +589,7 @@
 				298914B02587712300E90FA7 /* XCBaseViewController.swift in Sources */,
 				298D0BB52591D9FC00F5F0ED /* XCNormalCollectionViewCell.swift in Sources */,
 				29C15CD2259358ED00889D13 /* XCAnchorModel.swift in Sources */,
+				29D0F1532594D0E500A0D526 /* XCRoomVerticalViewController.swift in Sources */,
 				298FF433258B3FA800553580 /* XCPageContainView.swift in Sources */,
 				29C15CDF2593680200889D13 /* XCBaseModel.swift in Sources */,
 				298914C82587775000E90FA7 /* ProjectDefine.swift in Sources */,
@@ -699,13 +751,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = PY2SMZTG97;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VideoLiveProgect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xc.cn.VideoLiveProgect;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.118100.imusicPlayer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -720,13 +773,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = PY2SMZTG97;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VideoLiveProgect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = xc.cn.VideoLiveProgect;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.118100.imusicPlayer2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

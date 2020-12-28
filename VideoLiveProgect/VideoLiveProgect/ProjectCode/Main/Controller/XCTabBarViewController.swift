@@ -20,6 +20,9 @@ class XCTabBarViewController: UITabBarController {
         let followNavController = UIStoryboard(name: "Follow", bundle: nil).instantiateInitialViewController()
         let profilenavController = UIStoryboard(name: "Profile", bundle: nil).instantiateInitialViewController()
         setViewControllers([homeNavController!,liveMavController!,followNavController!,profilenavController!], animated: false)
+        
+        let app:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+        app.tabbarController = self
     }
     /*
     // MARK: - Navigation

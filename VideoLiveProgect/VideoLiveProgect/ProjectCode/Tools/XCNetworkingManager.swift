@@ -10,7 +10,7 @@ import Alamofire
 
 class XCNetworkingManager {
     
-    class func postRequest(urlStr:String , parameters:Dictionary<String,AnyObject>?=nil,responseCallBack: @escaping (_ result:Any)->()){
+    class func postRequest(urlStr:String , parameters:Dictionary<String,Any>?=nil,responseCallBack: @escaping (_ result:Any)->()){
         let reqUrl:URL = URL.init(string: "\(SERVER_BASE_URL)\(urlStr)")!
         let headersDic : HTTPHeaders = NSMutableDictionary(dictionary: SessionManager.defaultHTTPHeaders) as! HTTPHeaders
         
