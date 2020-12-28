@@ -10,7 +10,8 @@
 #endif
 #endif
 
+#import "FSPagerViewObjcCompat.h"
 
-FOUNDATION_EXPORT double SwiftyJSONVersionNumber;
-FOUNDATION_EXPORT const unsigned char SwiftyJSONVersionString[];
+FOUNDATION_EXPORT double FSPagerViewVersionNumber;
+FOUNDATION_EXPORT const unsigned char FSPagerViewVersionString[];
 
